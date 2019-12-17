@@ -107,11 +107,11 @@
                                 <!--HOME-->
                                 <li class="{{ request()->is('admin') ? 'active-item':'' }}"><a href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
                                 <!--CHARTS-->
-                                <li class="has-child-item close-item">
+                                <li class="has-child-item close-item {{ request()->is('brand/*') ? 'open-item':'' }}">
                                     <a><i class="fa fa-list" aria-hidden="true"></i><span>Brand</span> </a>
                                     <ul class="nav child-nav level-1">
-                                        <li><a href="{{ route('add_brand') }}">Add Brend</a></li>
-                                        <li><a href="{{ route('manage_brand') }}">Manage Breand</a></li>
+                                        <li class="{{ request()->is('brand/add-brand') ? 'active-item':'' }}"><a href="{{ route('add_brand') }}">Add Brend</a></li>
+                                        <li class="{{ request()->is('brand/manage-brand') ? 'active-item':'' }}"><a href="{{ route('manage_brand') }}">Manage Breand</a></li>
                                     </ul>
                                 </li>
 
