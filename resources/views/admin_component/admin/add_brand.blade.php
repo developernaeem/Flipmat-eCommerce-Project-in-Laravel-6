@@ -13,5 +13,11 @@
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 <div class="row animated fadeInUp">
 	<h1>Add Brand</h1>
+	<h1>Add Brand</h1>
+	<h1>Add Brand</h1>
+	<h1>Add Brand</h1>
+	<h1>Add Brand</h1>
+	<h1>Add Brand</h1>
+	<h1>Add Brand</h1>
 </div>
 @endsection
