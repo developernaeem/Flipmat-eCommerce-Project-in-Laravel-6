@@ -41,5 +41,26 @@ $(document).ready(function(){
 
 		});
 	});
+	
+	// $('#brandAdd').on('submit', function(e){
+	// 	e.preventDefault();
+
+	// 	$.ajaxSetup({
+	// 		headers: {
+	// 			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	// 		}
+	// 	});
+
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "{{ route('store_brand') }}",
+	// 		data: $('#brandAdd').serialize(),
+	// 		success: function(response){
+	// 			console.log(response);
+	// 		}
+	// 	});
+	// });
+
+
 });
 
