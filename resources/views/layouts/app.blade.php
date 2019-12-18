@@ -13,10 +13,13 @@
     <!--BASIC css-->
     <!-- ========================================================= -->
     <link rel="stylesheet" href="{{ asset('assets/admin/vendor/bootstrap/css/bootstrap.css') }}">
+    <link href="{{ asset('assets/admin/vendor/bootstrap-toggle/bootstrap-toggle.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/admin/vendor/font-awesome/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/admin/vendor/animate.css/animate.css') }}">
     <!--SECTION css-->
     <!-- ========================================================= -->
+    <!--dataTable-->
+    <link rel="stylesheet" href="{{ asset('assets/admin/vendor/data-table/media/css/dataTables.bootstrap.min.css') }}">
     <!--Notification msj-->
     <link rel="stylesheet" href="{{ asset('assets/admin/vendor/toastr/toastr.min.css') }}">
     <!--Magnific popup-->
@@ -106,12 +109,31 @@
                             <ul class="nav nav-left-lines" id="main-nav">
                                 <!--HOME-->
                                 <li class="{{ request()->is('admin') ? 'active-item':'' }}"><a href="{{ route('home') }}"><i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>
-                                <!--CHARTS-->
+                                <!--Brand-->
                                 <li class="has-child-item close-item {{ request()->is('brand/*') ? 'open-item':'' }}">
                                     <a><i class="fa fa-list" aria-hidden="true"></i><span>Brand</span> </a>
                                     <ul class="nav child-nav level-1">
-                                        <li class="{{ request()->is('brand/add-brand') ? 'active-item':'' }}"><a href="{{ route('add_brand') }}">Add Brend</a></li>
-                                        <li class="{{ request()->is('brand/manage-brand') ? 'active-item':'' }}"><a href="{{ route('manage_brand') }}">Manage Breand</a></li>
+                                        <li class="{{ request()->is('brand/add-brand', 'brand/edit-brand/*') ? 'active-item':'' }}">
+                                            <a href="{{ route('add_brand') }}">Add Brand</a>
+                                        </li>
+                                        <li class="{{ request()->is('brand/brand-list') ? 'active-item':'' }}">
+                                            <a href="{{ route('brand_list') }}">Brand List</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--Categories-->
+                                <li class="has-child-item close-item {{ request()->is('category/*') ? 'open-item':'' }}">
+                                    <a><i class="fa fa-list" aria-hidden="true"></i><span>Categories</span> </a>
+                                    <ul class="nav child-nav level-1">
+                                        <li class="{{ request()->is('category/category-list') ? 'active-item':'' }}">
+                                            <a href="{{ route('category_list') }}">Category</a>
+                                        </li>
+                                        <li class="{{ request()->is('category/subcategory-list') ? 'active-item':'' }}">
+                                            <a href="{{ route('subcategory_list') }}">SubCategory</a>
+                                        </li>
+                                        <li class="{{ request()->is('category/sub-subcategory-list') ? 'active-item':'' }}">
+                                            <a href="{{ route('sub_subcategory_list') }}">Sub SubCategory</a>
+                                        </li>
                                     </ul>
                                 </li>
 
@@ -135,8 +157,10 @@
     <!--BASIC scripts-->
     <!-- ========================================================= -->
     <script src="{{ asset('assets/admin/vendor/jquery/jquery-1.12.3.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendor/jquery/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('assets/admin/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/admin/vendor/nano-scroller/nano-scroller.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendor/bootstrap-toggle/bootstrap-toggle.min.js') }}"></script>
     <!--TEMPLATE scripts-->
     <!-- ========================================================= -->
     <script src="{{ asset('assets/admin/javascripts/template-script.min.js') }}"></script>
@@ -149,8 +173,15 @@
     <script src="{{ asset('assets/admin/vendor/chart-js/chart.min.js') }}"></script>
     <!--Gallery with Magnific popup-->
     <script src="{{ asset('assets/admin/vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+    <!--dataTable-->
+    <script src="{{ asset('assets/admin/vendor/data-table/media/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/vendor/data-table/media/js/dataTables.bootstrap.min.js') }}"></script>
+    {{-- Form Validator Js --}}
+    <script src="{{ asset('assets/admin/vendor/form-validation/jquery.form-validator.min.js') }}"></script>
+    <!--Examples-->
+    <script src="{{ asset('assets/admin/javascripts/examples/tables/data-tables.js') }}"></script>
     <!--Examples-->
     <script src="{{ asset('assets/admin/javascripts/examples/dashboard.js') }}"></script>
+    <script src="{{ asset('assets/admin/javascripts/examples/script.js') }}"></script>
 </body>
-
 </html>
